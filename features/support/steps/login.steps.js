@@ -28,5 +28,5 @@ When('clico em Login', async () => {
 Then('vou para a pagina {string} e vejo {string}', async (url, titulo_secao) => {
     await inventoryPage.verificarPaginaInventario(url, titulo_secao)
     await page.waitForTimeout(2000) // espera bruta de 2s // alfinete
-    await page.close()
+    await browser.close() // fecha o navegador para encerrar o teste
 })
